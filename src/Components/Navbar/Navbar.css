@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Nunito:wght@300;400;600;700;800&family=Ubuntu+Condensed&display=swap');
+
+.nav-item.nav-link{
+    font-size: 30px;
+}
+
+.nav-bar {
+    font-family: 'Nunito', sans-serif;
+}
+
+.login-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+
+    border: none;
+    
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-buttons .btn-primary {
+    background-color: #338ae7;
+    color: white;
+}
+
+.login-buttons .btn-primary {
+    background-color: #338ae7;
+    color: white;
+}
+
+/* Navbar.css */
+.nav-item.nav-link {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 18px; 
+    margin-left: 50px;
+}
+
+.nav-item.nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease, transform 0.3s ease;
+    transform: translateX(-50%);
+    transform-origin: center bottom;
+}
+
+
+
+.nav-item.nav-link:hover::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: translateX(-50%);
+    transform-origin: center bottom;
+    animation: underlineGrow 0.3s ease forwards;
+    /* Use animation to grow the underline */
+}
+
+@keyframes underlineGrow {
+    0% {
+        transform: translateX(-50%) scaleX(0);
+    }
+
+    100% {
+        transform: translateX(-50%) scaleX(1);
+    }
+}
